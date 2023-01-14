@@ -5,7 +5,7 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(wallhaven-4llm1r.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(wallhaven-mp78om.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -78,7 +78,7 @@ ul li a:hover{
     background: transparent;
     border: 1px solid #ff0000;
     margin-top: 13px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     border-right: none;
     font-size: 16px;
     float: left;
@@ -112,154 +112,118 @@ ul li a:hover{
     outline: none;
 }
 
-.content{
-    width: 1200px;
-    height: auto;
-    margin: auto;
-    color: #fff;
-    position: relative;
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 80vh;
+	background-color: transparent;
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 200px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+    color:#ff0000;
+	font-size: 28px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#fcfcfc;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+    color:#fcfcfc;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color:#fff;
+}
+.content-section .social{
+	margin: 40px 40px;
+}
+.content-section .social i{
+	color:#a52a2a;
+	font-size: 30px;
+	padding:0px 10px;
+}
+.content-section .social i:hover{
+	color:#3d3d3d;
+}
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
 }
 
-.content .par{
-    padding-left: 20px;
-    padding-bottom: 25px;
-    font-family: Arial;
-    letter-spacing: 1.2px;
-    line-height: 30px;
 }
-
-.content h1{
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 20px;
-    margin-top: 9%;
-    letter-spacing: 2px;
-}
-
-.content .cn{
-    width: 160px;
-    height: 40px;
-    background: #ff0000;
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
-    
-}
-
-.content .cn a{
-    text-decoration: none;
-    color: #000;
-    transition: .3s ease;
-}
-
-.cn:hover{
-    background-color: #fff;
-}
-
-.content span{
-    color: #ff0000;
-    font-size: 65px
-}
-
-.form{
-    width: 250px;
-    height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: -20px;
-    left: 870px;
-    transform: translate(0%,-5%);
-    border-radius: 10px;
-    padding: 25px;
-}
-
-.form h2{
-    width: 220px;
-    font-family: sans-serif;
-    text-align: center;
-    color: #ff0000;
-    font-size: 22px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
-}
-
-.form input{
-    width: 240px;
-    height: 35px;
-    background: transparent;
-    border-bottom: 1px solid #ff0000;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
-}
-
-.form input:focus{
-    outline: none;
-}
-
 ::placeholder{
     color: #fff;
     font-family: Arial;
-}
-
-.btnn{
-    width: 240px;
-    height: 40px;
-    background: #ff0000;
-    border: none;
-    margin-top: 30px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
-    transition: 0.4s ease;
-}
-.btnn:hover{
-    background: #fff;
-    color: #ff0000;
-}
-.btnn a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-.form .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding-top: 20px;
-    text-align: center;
-}
-.form .link a{
-    text-decoration: none;
-    color: #ff0000;
-}
-.liw{
-    padding-top: 15px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-.icons a{
-    text-decoration: none;
-    color: #fff;
-}
-.icons ion-icon{
-    color: #fff;
-    font-size: 30px;
-    padding-left: 14px;
-    padding-top: 5px;
-    transition: 0.3s ease;
-}
-.icons ion-icon:hover{
-    color: #ff0000;
 }
