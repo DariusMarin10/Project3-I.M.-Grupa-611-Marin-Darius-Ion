@@ -40,7 +40,7 @@
                     <h2>Login Here</h2>
                     <input type="user" id="user" name="user" placeholder="Enter User Here">
                     <input type="password" id="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn" onclick="validationcheck()"><a href="#">Login</a></button>
+                    <button class="btnn" onclick="login()"><a href="#">Login</a></button>
 
                     <p class="link">Don't have an account<br>
                     <a href="#">Sign up </a> here</a></p>
@@ -66,59 +66,6 @@
 
 <script type="text/javascript">
 
-/*const userId = sessionStorage.getItem("userId");
-if (userId) {
-    window.location.href = "home.html";
-}
-
-
-function signIn() {
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-
-    if (!email.value || !password.value) {
-        alert("Please fill in the required information.");
-    }
-
-    const URL = "http://localhost:5611/api/v1/authenticate";
-    const body = {
-        "email": email.value,
-        "password": password.value
-    };
-    const params = {
-        "method": "POST",
-        "mode": "cors",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": JSON.stringify(body)
-    };
-
-    fetch(URL, params).then(responseReceived).then(processData).catch(displayError);
-}
-
-function responseReceived(response) {
-    if (!response.ok) {
-        alert("Failed to sign in.");
-    }
-    return response.json();
-}
-
-function processData(data) {
-    localStorage.setItem("userId", data.id);
-    localStorage.setItem("userEmail", data.email);
-
-    sessionStorage.setItem("userId", data.id);
-    sessionStorage.setItem("userEmail", data.email);
-
-    document.cookie = `userId=${data.id}; userEmail=${data.email}; expires=Fri, 23 Dec 2022 23:59:59 UTC; path=/;`;
-
-    window.location.href = "home.html";
-}
-
-function displayError(error) {
-    alert(error.message);
-}*/
 
 var db;
 
@@ -132,15 +79,7 @@ try {
   db.transaction(function(tx) {
     var sql;
 
-    /*
-    sql = `DROP TABLE Persons`;
-
-    tx.executeSql(sql, [], function(tx, result) {
-      console.log('RESULT:', result);
-    }, function(tx, error) {
-      console.log('ERROR:', error);
-    });
-    */
+   
 
     sql = `
       CREATE TABLE IF NOT EXISTS APP.USERS (
@@ -156,40 +95,7 @@ try {
       console.log('ERROR:', error);
     });
 
-    /*
-    sql = `
-      SELECT * FROM Persons WHERE username='Darius'
-    `;
-
-    tx.executeSql(sql, [], function(tx, result) {
-      if (result.rows.length == 1)
-      {
-        var user = result.rows.item(0);
-        console.log(user);
-      }
-    }, function(tx, error) {
-      console.log('ERROR:', error);
-    });
-    */
-
-    /*
-    sql = `
-      INSERT INTO Persons (
-        username,
-        password
-      ) VALUES (
-        'admin',
-        'admin'
-      );
-    `;
-
-    tx.executeSql(sql, [], function(tx, result) {
-      console.log('RESULT:', result);
-    }, function(tx, error) {
-      console.log('ERROR:', error);
-    });
-    */
-
+ 
   });
 } catch (e) {
   console.log(e)
@@ -214,6 +120,7 @@ function validationcheck() {
 
             if (user == user.user && password == user.password) {
               console.log('LOGIN SUCCESS');
+               window.location.href = "About.html";
             } else {
               console.log('LOGIN FAILURE');
             }
@@ -229,5 +136,24 @@ function validationcheck() {
   }
 }
 
+function login() {
+  const user = document.getElementById("user");
+   const password = document.getElementById("password");
+  if (user.value == "") {
+    console.log('please enter username');
+   alert('please enter username')
+  } else if (password.value == "") {
+    console.log('please enter password');
+     alert('please enter password')
+  } else {
+   
+    if(user.value == "Darius" && password.value == "123" ){window.location.href = "About.html";}
+    else if(user.value == "test" && password.value == "1234" ){window.location.href = "About.html";}
+    else {
+        console.log('login failed');
+         alert('login failed')
+    }
+  }
+}
 
 </script>

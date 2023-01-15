@@ -7,9 +7,9 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch chrome",
+            "name": "Launch Chrome",
             "url": "http://localhost:8080",
-            "webRoot": "C:\\Darius'\\Facultate\\Pagini web\\project 3\\Project3-I.M.-Grupa-611-Marin-Darius-Ion\\Website\\index.html"
+            "webRoot": "C:\\Darius'\\Facultate\\Pagini web\\Project3-I.M.-Grupa-611-Marin-Darius-Ion\\index.html"
         }
     ]
 }
